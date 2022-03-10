@@ -1,5 +1,5 @@
 # This repo contains scripts from my mini-series, 3 cool scripts. (playlist: https://youtube.com/playlist?list=PLKX44RibHTlui_r_qfnRDLRhXebKqvMXv )
-<br/><br/>
+<br/>
 
 - 3CS Part 1 GUI <br/>
 
