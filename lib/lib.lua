@@ -13,8 +13,6 @@
 
 local lib = {}
 
-function lib:run()
-
 --// Make stuff
 local _3coolscripts = Instance.new("ScreenGui")
 local lib_hold = Instance.new("Frame")
@@ -204,6 +202,3 @@ openlib.MouseButton1Click:Connect(function()
   lib_hold.Visible = true
   openlib.Visible = false
 end)
-
-end
-return lib
