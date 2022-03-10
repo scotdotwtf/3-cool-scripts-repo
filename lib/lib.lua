@@ -183,11 +183,10 @@ function lib:btn(name, image, script)
 
 	--// callback
 	local script = script or function() end
-	ScriptButton.MouseButton1Click:connect(function()
+	script_btn_hold.MouseButton1Click:connect(function()
 		pcall(script)
 	end)
 end
-return lib
 
 closebtn.MouseButton1Click:Connect(function()
   _3coolscripts:Destroy()
