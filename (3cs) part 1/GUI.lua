@@ -1,5 +1,7 @@
 local lib = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/phonx%20mobile%20ui%20lib/phonx_src.lua"))()
 
+lib:run()
+
 lib:btn("Hey", "http://www.roblox.com/asset/?id=6283974773", function()
     local LocalPlayer = game:GetService("Players").LocalPlayer
     local Heartbeat = game:GetService("RunService").Heartbeat

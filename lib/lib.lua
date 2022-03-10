@@ -13,6 +13,8 @@
 
 local lib = {}
 
+function lib:run()
+
 --// Make stuff
 local _3coolscripts = Instance.new("ScreenGui")
 local lib_hold = Instance.new("Frame")
@@ -187,6 +189,7 @@ function lib:btn(name, image, script)
 		pcall(script)
 	end)
 end
+return lib
 
 closebtn.MouseButton1Click:Connect(function()
   _3coolscripts:Destroy()
@@ -201,3 +204,6 @@ openlib.MouseButton1Click:Connect(function()
   lib_hold.Visible = true
   openlib.Visible = false
 end)
+
+end
+return lib
