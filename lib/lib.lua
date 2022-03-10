@@ -150,14 +150,14 @@ function lib:btn(name, image, script)
     local script_img = Instance.new("ImageLabel")
     local script_name = Instance.new("TextLabel") 
 
-    script_btn_hold.Name = "script_btn_hold"
+    script_btn_hold.Name = name
     script_btn_hold.Parent = main_hold
     script_btn_hold.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     script_btn_hold.BackgroundTransparency = 0.500
     script_btn_hold.BorderSizePixel = 0
     script_btn_hold.Size = UDim2.new(0, 128, 0, 158)
     script_btn_hold.Font = Enum.Font.SourceSans
-    script_btn_hold.Text = ""
+    script_btn_hold.Text = name
     script_btn_hold.TextColor3 = Color3.fromRGB(0, 0, 0)
     script_btn_hold.TextSize = 14.000
     
@@ -168,7 +168,7 @@ function lib:btn(name, image, script)
     script_img.BorderSizePixel = 0
     script_img.Position = UDim2.new(0.109375, 0, 0.0506329127, 0)
     script_img.Size = UDim2.new(0, 100, 0, 100)
-    script_img.Image = "rbxassetid://9056751910"
+    script_img.Image = image
     script_img.ScaleType = Enum.ScaleType.Fit
     
     script_name.Name = "script_name"
