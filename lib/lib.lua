@@ -20,10 +20,10 @@ local top = Instance.new("Frame")
 local name = Instance.new("TextLabel")
 local padding_n = Instance.new("UIPadding")
 local rhold = Instance.new("Frame")
-local openbtn = Instance.new("TextButton")
 local list_r = Instance.new("UIListLayout")
 local padding_r = Instance.new("UIPadding")
 local closebtn = Instance.new("TextButton")
+local hidebtn = Instance.new("TextButton")
 local main_hold = Instance.new("Frame")
 local list_main = Instance.new("UIListLayout")
 local openlib = Instance.new("ImageButton")
@@ -31,8 +31,7 @@ local libopenname = Instance.new("TextLabel")
 
 --// Properties
 _3coolscripts.Name = "3coolscripts"
-_3coolscripts.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-_3coolscripts.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_3coolscripts.Parent = game:GetService("CoreGui")
 
 lib_hold.Name = "lib_hold"
 lib_hold.Parent = _3coolscripts
@@ -75,17 +74,6 @@ rhold.BorderSizePixel = 0
 rhold.Position = UDim2.new(0.944812417, 0, 0, 0)
 rhold.Size = UDim2.new(0, 25, 0, 25)
 
-openbtn.Name = "openbtn"
-openbtn.Parent = rhold
-openbtn.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-openbtn.BorderSizePixel = 0
-openbtn.Position = UDim2.new(0.25, 0, 0.200000003, 0)
-openbtn.Size = UDim2.new(0, 15, 0, 15)
-openbtn.Font = Enum.Font.SourceSans
-openbtn.Text = ""
-openbtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-openbtn.TextSize = 14.000
-
 list_r.Name = "list_r"
 list_r.Parent = rhold
 list_r.FillDirection = Enum.FillDirection.Horizontal
@@ -97,6 +85,17 @@ list_r.Padding = UDim.new(0, 5)
 padding_r.Name = "padding_r"
 padding_r.Parent = rhold
 padding_r.PaddingRight = UDim.new(0, 5)
+
+hidebtn.Name = "hidebtn"
+hidebtn.Parent = rhold
+hidebtn.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+hidebtn.BorderSizePixel = 0
+hidebtn.Position = UDim2.new(0.25, 0, 0.200000003, 0)
+hidebtn.Size = UDim2.new(0, 15, 0, 15)
+hidebtn.Font = Enum.Font.SourceSans
+hidebtn.Text = ""
+hidebtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+hidebtn.TextSize = 14.000
 
 closebtn.Name = "closebtn"
 closebtn.Parent = rhold
@@ -132,6 +131,7 @@ openlib.BackgroundTransparency = 1.000
 openlib.Position = UDim2.new(0, 0, 1, -100)
 openlib.Size = UDim2.new(0, 100, 0, 100)
 openlib.Image = "rbxassetid://9056751910"
+openlib.Visible = false
 
 libopenname.Name = "libopenname"
 libopenname.Parent = openlib
@@ -187,4 +187,17 @@ function lib:btn(name, image, script)
 		pcall(script)
 	end)
 end
-return lib
+
+closebtn.MouseButton1Click:Connect(function()
+  _3coolscripts:Destroy()
+end)
+
+hidebtn.MouseButton1Click:Connect(function()
+  lib_hold.Visible = false
+  openlib.Visible = true
+end)
+
+openlib.MouseButton1Click:Connect(function()
+  lib_hold.Visible = true
+  openlib.Visible = false
+end)
