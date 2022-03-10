@@ -157,7 +157,7 @@ function lib:btn(name, image, script)
     script_btn_hold.BorderSizePixel = 0
     script_btn_hold.Size = UDim2.new(0, 128, 0, 158)
     script_btn_hold.Font = Enum.Font.SourceSans
-    script_btn_hold.Text = name
+    script_btn_hold.Text = ""
     script_btn_hold.TextColor3 = Color3.fromRGB(0, 0, 0)
     script_btn_hold.TextSize = 14.000
     
@@ -177,7 +177,7 @@ function lib:btn(name, image, script)
     script_name.Position = UDim2.new(0.109375, 0, 0.740506351, 0)
     script_name.Size = UDim2.new(0, 100, 0, 33)
     script_name.Font = Enum.Font.RobotoMono
-    script_name.Text = "Name"
+    script_name.Text = name
     script_name.TextColor3 = Color3.fromRGB(255, 255, 255)
     script_name.TextSize = 16.000
 
