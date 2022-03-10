@@ -201,3 +201,5 @@ openlib.MouseButton1Click:Connect(function()
   lib_hold.Visible = true
   openlib.Visible = false
 end)
+
+return lib
